@@ -1,0 +1,61 @@
+﻿<Window x:Class="Tic_Tac_Toe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tic_Tac_Toe"
+        mc:Ignorable="d"
+        Title="Tic Tac Toe" Height="480" Width="480">
+    <Grid Visibility="Visible" Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name ="textBlock1" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="0" Text="?" VerticalAlignment="Center" FontSize="64"/>
+        <TextBlock x:Name ="textBlock2" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="0" Text="?" VerticalAlignment="Center" FontSize="64"/>
+        <TextBlock x:Name ="textBlock3" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="0" Text="?" VerticalAlignment="Center" FontSize="64"/>
+
+        <TextBlock x:Name ="textBlock4" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="1" Text="?" VerticalAlignment="Center" FontSize="64"/>
+        <TextBlock x:Name ="textBlock5" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" Text="?" VerticalAlignment="Center" FontSize="64"/>
+        <TextBlock x:Name ="textBlock6" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" Text="?" VerticalAlignment="Center" FontSize="64"/>
+
+        <TextBlock x:Name ="textBlock7" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="2" Text="?" VerticalAlignment="Center" FontSize="64"/>
+        <TextBlock x:Name ="textBlock8" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" Text="?" VerticalAlignment="Center" FontSize="64"/>
+        <TextBlock x:Name ="textBlock9" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" Text="?" VerticalAlignment="Center" FontSize="64"/>
+
+        <Border BorderThickness="1" BorderBrush="Black">
+            <Button x:Name="button1" Content="" Background="Transparent" Click="button1_Click" Opacity="0"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="1">
+            <Button x:Name="button2" Content="" Background="Transparent" Click="button2_Click" Opacity="0"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="3">
+            <Button x:Name="button3" Content="" Background="Transparent" Click="button3_Click" Opacity="0"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1">
+            <Button x:Name="button4" Content="" Background="Transparent" Click="button4_Click" Opacity="0"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="1">
+            <Button x:Name="button5" Content="" Background="Transparent" Click="button5_Click" Opacity="0"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="2">
+            <Button x:Name="button6" Content="" Background="Transparent" Click="button6_Click" Opacity="0"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2">
+            <Button x:Name="button7" Content="" Background="Transparent" Click="button7_Click" Opacity="0"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="1">
+            <Button x:Name="button8" Content="" Background="Transparent" Click="button8_Click" Opacity="0"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="2">
+            <Button x:Name="button9" Content="" Background="Transparent" Click="button9_Click" Opacity="0"/>
+        </Border>
+        <TextBlock x:Name="GameFinishText" Grid.Column="1" HorizontalAlignment="Center" Text="a" VerticalAlignment="Top" FontSize="16" Margin="0,5,0,0" Width="140" Grid.Row="1" Height="72" MouseDown="PlayAgainText_MouseDown"/>
+    </Grid>
+</Window>

@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Tic_Tac_Toe
 {
@@ -31,6 +21,10 @@ namespace Tic_Tac_Toe
             SetUpGame();
         }
 
+
+        /// <summary>
+        /// Sets up the game
+        /// </summary>
         private void SetUpGame()
         {
             LastWasX = false;
@@ -58,7 +52,7 @@ namespace Tic_Tac_Toe
         }
 
         /// <summary>
-        /// on mouse button left click, place an X or an O depends on the last symbol placed, if a symbol is already placed, ignore.
+        /// On mouse left click, place an X or an O depends on the last symbol placed
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -380,103 +374,97 @@ namespace Tic_Tac_Toe
         }
 
         /// <summary>
-        /// check if a player has won
+        /// Checks if a player won
         /// </summary>
         /// <returns> returns true if a certain player won, false otherwise </returns>
         private bool GameEnded()
         {
-            if (1 == 1)
+            if (GameGridX[0, 0] == 1 && GameGridX[1, 0] == 1 && GameGridX[2, 0] == 1)
             {
-                if (GameGridX[0, 0] == 1 && GameGridX[1, 0] == 1 && GameGridX[2, 0] == 1)
-                {
-                    Win = "X won! Play again?";
-                    return true;
-                }
-                else if (GameGridX[0, 0] == 1 && GameGridX[0, 1] == 1 && GameGridX[0, 2] == 1)
-                {
-                    Win = "X won! Play again?";
-                    return true;
-                }
-                else if (GameGridX[0, 2] == 1 && GameGridX[1, 2] == 1 && GameGridX[2, 2] == 1)
-                {
-                    Win = "X won! Play again?";
-                    return true;
-                }
-                else if (GameGridX[2, 0] == 1 && GameGridX[2, 1] == 1 && GameGridX[2, 2] == 1)
-                {
-                    Win = "X won! Play again?";
-                    return true;
-                }
-                else if (GameGridX[0, 0] == 1 && GameGridX[1, 1] == 1 && GameGridX[2, 2] == 1)
-                {
-                    Win = "X won! Play again?";
-                    return true;
-                }
-                else if (GameGridX[2, 0] == 1 && GameGridX[1, 1] == 1 && GameGridX[0, 2] == 1)
-                {
-                    Win = "X won! Play again?";
-                    return true;
-                }
-                else if (GameGridX[0, 1] == 1 && GameGridX[1, 1] == 1 && GameGridX[2, 1] == 1)
-                {
-                    Win = "X won! Play again?";
-                    return true;
-                }
-                else if (GameGridX[1, 0] == 1 && GameGridX[1, 1] == 1 && GameGridX[1, 2] == 1)
-                {
-                    Win = "X won! Play again?";
-                    return true;
-                }
+                Win = "X won! Play again?";
+                return true;
             }
-            if (2 == 2)
+            else if (GameGridX[0, 0] == 1 && GameGridX[0, 1] == 1 && GameGridX[0, 2] == 1)
             {
-                if (GameGridO[0, 0] == 1 && GameGridO[1, 0] == 1 && GameGridO[2, 0] == 1)
-                {
-                    Win = "O won! Play again?";
-                    return true;
-                }
-                else if (GameGridO[0, 0] == 1 && GameGridO[0, 1] == 1 && GameGridO[0, 2] == 1)
-                {
-                    Win = "O won! Play again?";
-                    return true;
-                }
-                else if (GameGridO[0, 2] == 1 && GameGridO[1, 2] == 1 && GameGridO[2, 2] == 1)
-                {
-                    Win = "O won! Play again?";
-                    return true;
-                }
-                else if (GameGridO[2, 0] == 1 && GameGridO[2, 1] == 1 && GameGridO[2, 2] == 1)
-                {
-                    Win = "O won! Play again?";
-                    return true;
-                }
-                else if (GameGridO[0, 0] == 1 && GameGridO[1, 1] == 1 && GameGridO[2, 2] == 1)
-                {
-                    Win = "O won! Play again?";
-                    return true;
-                }
-                else if (GameGridO[2, 0] == 1 && GameGridO[1, 1] == 1 && GameGridO[0, 2] == 1)
-                {
-                    Win = "O won! Play again?";
-                    return true;
-                }
-                else if (GameGridO[0, 1] == 1 && GameGridO[1, 1] == 1 && GameGridO[2, 1] == 1)
-                {
-                    Win = "O won! Play again?";
-                    return true;
-                }
-                else if (GameGridO[1, 0] == 1 && GameGridO[1, 1] == 1 && GameGridO[1, 2] == 1) 
-                {
-                    Win = "O won! Play again?";
-                    return true;
-                }
+                Win = "X won! Play again?";
+                return true;
+            }
+            else if (GameGridX[0, 2] == 1 && GameGridX[1, 2] == 1 && GameGridX[2, 2] == 1)
+            {
+                Win = "X won! Play again?";
+                return true;
+            }
+            else if (GameGridX[2, 0] == 1 && GameGridX[2, 1] == 1 && GameGridX[2, 2] == 1)
+            {
+                Win = "X won! Play again?";
+                return true;
+            }
+            else if (GameGridX[0, 0] == 1 && GameGridX[1, 1] == 1 && GameGridX[2, 2] == 1)
+            {
+                Win = "X won! Play again?";
+                return true;
+            }
+            else if (GameGridX[2, 0] == 1 && GameGridX[1, 1] == 1 && GameGridX[0, 2] == 1)
+            {
+                Win = "X won! Play again?";
+                return true;
+            }
+            else if (GameGridX[0, 1] == 1 && GameGridX[1, 1] == 1 && GameGridX[2, 1] == 1)
+            {
+                Win = "X won! Play again?";
+                return true;
+            }
+            else if (GameGridX[1, 0] == 1 && GameGridX[1, 1] == 1 && GameGridX[1, 2] == 1)
+            {
+                Win = "X won! Play again?";
+                return true;
+            }
 
-            }  
-          return false;
+            else if (GameGridO[0, 0] == 1 && GameGridO[1, 0] == 1 && GameGridO[2, 0] == 1)
+            {
+                Win = "O won! Play again?";
+                return true;
+            }
+            else if (GameGridO[0, 0] == 1 && GameGridO[0, 1] == 1 && GameGridO[0, 2] == 1)
+            {
+                Win = "O won! Play again?";
+                return true;
+            }
+            else if (GameGridO[0, 2] == 1 && GameGridO[1, 2] == 1 && GameGridO[2, 2] == 1)
+            {
+                Win = "O won! Play again?";
+                return true;
+            }
+            else if (GameGridO[2, 0] == 1 && GameGridO[2, 1] == 1 && GameGridO[2, 2] == 1)
+            {
+                Win = "O won! Play again?";
+                return true;
+            }
+            else if (GameGridO[0, 0] == 1 && GameGridO[1, 1] == 1 && GameGridO[2, 2] == 1)
+            {
+                Win = "O won! Play again?";
+                return true;
+            }
+            else if (GameGridO[2, 0] == 1 && GameGridO[1, 1] == 1 && GameGridO[0, 2] == 1)
+            {
+                Win = "O won! Play again?";
+                return true;
+            }
+            else if (GameGridO[0, 1] == 1 && GameGridO[1, 1] == 1 && GameGridO[2, 1] == 1)
+            {
+                Win = "O won! Play again?";
+                return true;
+            }
+            else if (GameGridO[1, 0] == 1 && GameGridO[1, 1] == 1 && GameGridO[1, 2] == 1)
+            {
+                Win = "O won! Play again?";
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
-        /// when the games finishes, either from a draw or from a win, pressing on "play again?" will start a new game
+        /// When the games finishes, either from a draw or from a win, pressing on "play again?" will start a new game
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

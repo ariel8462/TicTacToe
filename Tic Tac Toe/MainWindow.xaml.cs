@@ -5,9 +5,7 @@ using System.Windows.Input;
 
 namespace Tic_Tac_Toe
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    // Interaction logic for MainWindow.xaml
     public partial class MainWindow : Window
     {
         bool LastWasX;
@@ -22,9 +20,7 @@ namespace Tic_Tac_Toe
         }
 
 
-        /// <summary>
-        /// Sets up the game
-        /// </summary>
+        // Sets up the game
         private void SetUpGame()
         {
             LastWasX = false;
@@ -39,23 +35,12 @@ namespace Tic_Tac_Toe
                 for (int j = 0; j < 3; j++)
                 {
                     GameGridX[i, j] = 0;
-                }
-            }
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
                     GameGridO[i, j] = 0;
                 }
             }
-
         }
 
-        /// <summary>
-        /// On mouse left click, place an X or an O depends on the last symbol placed
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // On mouse left click, place an X or an O depends on the last symbol placed
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             if ((textBlock1.Text == "O" || textBlock1.Text == "X") || GameEnded() == true)
@@ -373,10 +358,7 @@ namespace Tic_Tac_Toe
             }
         }
 
-        /// <summary>
-        /// Checks if a player won
-        /// </summary>
-        /// <returns> returns true if a certain player won, false otherwise </returns>
+        // Checks if a player won
         private bool GameEnded()
         {
             if (GameGridX[0, 0] == 1 && GameGridX[1, 0] == 1 && GameGridX[2, 0] == 1)
@@ -463,11 +445,7 @@ namespace Tic_Tac_Toe
             return false;
         }
 
-        /// <summary>
-        /// When the games finishes, either from a draw or from a win, pressing on "play again?" will start a new game
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // Sets up a new game after the existing one ends
         private void PlayAgainText_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (GameEnded() || UnfilledSquares == 0)
